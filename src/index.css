@@ -1,0 +1,28 @@
+.photo-grid {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.photo-grid:after {
+  content: '';
+  flex-grow: 9999999;
+  min-width: 200px;
+  height: 0;
+}
+
+.photo-grid-wrapper {
+  margin: 2px;
+  background-color: violet;
+  position: relative;
+}
+
+.photo-grid-wrapper i {
+  display: block;
+  padding-bottom: 100%;
+}
+.photo-grid-wrapper img {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  vertical-align: bottom;
+}

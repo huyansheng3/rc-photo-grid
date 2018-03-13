@@ -1,15 +1,44 @@
-import React, {Component} from 'react'
-import {render} from 'react-dom'
+import React, { Component } from 'react'
+import { render } from 'react-dom'
+import PhotoGrid from '../../src'
+import cats from './cats.json'
 
-import Example from '../../src'
-
-class Demo extends Component {
+class Demo1 extends Component {
   render() {
-    return <div>
-      <h1>photo-grid Demo</h1>
-      <Example/>
-    </div>
+    const photos = cats.map(
+      cat => 'https://xieranmaya.github.io/images/cats/' + cat.url
+    )
+    return (
+      <div>
+        <h1>photo-grid Demo with url</h1>
+        <PhotoGrid photos={photos} />
+      </div>
+    )
   }
 }
 
-render(<Demo/>, document.querySelector('#demo'))
+class Demo2 extends Component {
+  render() {
+    const photos = cats.map(cat => ({
+      ...cat,
+      url: 'https://xieranmaya.github.io/images/cats/' + cat.url,
+    }))
+    return (
+      <div>
+        <h1>photo-grid Demo with url and size info</h1>
+        <PhotoGrid photos={photos} />
+      </div>
+    )
+  }
+}
+
+const App = props => {
+  return (
+    <div>
+      <Demo1 />
+      <Demo2 />
+    </div>
+  )
+}
+
+render(<App />, document.querySelector('#demo'))
