@@ -1,7 +1,7 @@
 {
   "name": "rc-photo-grid",
   "version": "1.0.2",
-  "description": "An React component photo-grid like google search photo grid!",
+  "description": "A React component photo-grid like google search photo grid!",
   "main": "lib/index.js",
   "module": "es/index.js",
   "files": ["css", "es", "lib", "umd"],
@@ -12,7 +12,7 @@
     "test": "nwb test-react",
     "test:coverage": "nwb test-react --coverage",
     "test:watch": "nwb test-react --server",
-    "deploy": "gh-pages -d demo"
+    "deploy": "gh-pages -d demo/dist"
   },
   "dependencies": {
     "classnames": "^2.2.5",

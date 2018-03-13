@@ -4,11 +4,51 @@
 [![npm package][npm-badge]][npm]
 [![Coveralls][coveralls-badge]][coveralls]
 
-An React component photo-grid like google search photo grid!
+## A React component photo-grid like google search photo grid! inspired by the [blog](https://github.com/xieranmaya/blog/issues/4)
 
 ![demo](https://github.com/huyansheng3/react-photo-grid/raw/master/show.gif)
 
+[live demo](https://huyansheng3.github.io/rc-photo-grid/index.html)
+
 you can install by run `npm i --save rc-photo-grid`
+
+example:
+
+```
+const cats = [
+  {
+    "url": "photo-103450229.jpg",
+    "width": 675,
+    "height": 900
+  },
+  {
+    "url": "photo-108273877.jpg",
+    "width": 1170,
+    "height": 780
+  },
+  {
+    "url": "photo-115203323.jpg",
+    "width": 1170,
+    "height": 780
+  },
+]
+
+class Demo1 extends Component {
+  render() {
+    const photos = cats.map(
+      cat => 'https://xieranmaya.github.io/images/cats/' + cat.url
+    )
+    return (
+      <div>
+        <h1>photo-grid Demo with url</h1>
+        <PhotoGrid photos={photos} />
+      </div>
+    )
+  }
+}
+```
+
+## MIT Licensed
 
 [build-badge]: https://img.shields.io/travis/user/repo/master.png?style=flat-square
 [build]: https://travis-ci.org/user/repo
