@@ -10,9 +10,18 @@
 
 [live demo](https://huyansheng3.github.io/rc-photo-grid/index.html)
 
+## API
+
+PhotoGrid props
+
+| name   | description       | type                                                                  | default |
+| ------ | ----------------- | --------------------------------------------------------------------- | ------- |
+| photos | photo list        | Array[String] or Arrary[{url: String, width: Number, height: Number}] | []      |
+| unit   | photo height unit | Number                                                                | 200     |
+
 you can install by run `npm i --save rc-photo-grid`
 
-example:
+## example:
 
 ```
 const cats = [
@@ -48,7 +57,9 @@ class Demo1 extends Component {
 }
 ```
 
-## MIT Licensed
+## Licensed
+
+MIT
 
 [build-badge]: https://img.shields.io/travis/user/repo/master.png?style=flat-square
 [build]: https://travis-ci.org/user/repo

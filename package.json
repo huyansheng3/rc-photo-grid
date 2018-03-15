@@ -1,6 +1,6 @@
 {
   "name": "rc-photo-grid",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "A React component photo-grid like google search photo grid!",
   "main": "lib/index.js",
   "module": "es/index.js",
